@@ -1,0 +1,75 @@
+.chiếu1 {
+  width: 100vw;  /* Chiều rộng 100% của viewport */
+  height: 100vh; /* Chiều cao 100% của viewport */
+  background-color: #f0f0f0; /* Màu nền tùy chọn */
+  z-index: 0;
+}
+
+#big1 {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.diaxx {
+  position: absolute;
+  /* Đặt vị trí thực tế nếu cần */
+}
+
+.batxx {
+  position: absolute;
+  border-radius: 1000px;
+  z-index: 11;
+  /* Đặt vị trí thực tế nếu cần */
+}
+
+.result {
+  display: flex; /* Để căn giữa và quản lý khoảng cách */
+  position: absolute; /* Chỉ cần nếu bạn muốn căn chỉnh cụ thể */
+  padding: 55px;
+  justify-content: space-between; /* Để cách xa các phần tử */
+}
+
+.result1, .result2, .result3 {
+  width: 142px; /* Kích thước của từng kết quả */
+  height: 162px;
+  margin: 0 10px; /* Khoảng cách bên trái và bên phải */
+  display: flex; /* Để căn giữa nội dung bên trong */
+  justify-content: center; /* Căn giữa nội dung bên trong */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  z-index: 10;
+  border-radius: 50px;
+}
+
+#ovuong{
+  display:flex;
+  position:absolute;
+  top:1800px;
+  left: center;
+}
+
+button {
+  background-color: #bbc2bc; /* Màu nền của button */
+  color: rgb(227, 20, 199);              /* Màu chữ */
+  border: none;              /* Bỏ viền */
+  padding: 15px 32px;       /* Khoảng cách bên trong */
+  text-align: center;        /* Căn giữa nội dung */
+  text-decoration: none;     /* Bỏ gạch chân */
+  display: inline-block;     /* Hiển thị inline */
+  font-size: 16px;           /* Kích thước chữ */
+  margin: 16px 21px;          /* Khoảng cách giữa các button */
+  cursor: pointer;           /* Con trỏ chuột khi hover */
+  border-radius: 38px;       /* Bo góc */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+/* Thay đổi màu khi hover */
+button:hover {
+  background-color: #45a049; /* Màu nền khi hover */
+}
+
+
