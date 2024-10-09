@@ -50,7 +50,7 @@ window.addEventListener('devicemotion', (event) => {
 
             const speed = Math.abs(x + y + z - (lastX || 0) - (lastY || 0) - (lastZ || 0)) / diffTime * 10000;
 
-            if (speed > 5000) { // Thay đổi giá trị này để điều chỉnh độ nhạy
+            if (speed > 3000) { // Thay đổi giá trị này để điều chỉnh độ nhạy
                 handleShake();
             }
 
