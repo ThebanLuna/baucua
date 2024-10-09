@@ -52,6 +52,7 @@ window.addEventListener('devicemotion', (event) => {
 
             if (speed > 3000) { // Thay đổi giá trị này để điều chỉnh độ nhạy
                 handleShake();
+              playSound()
             }
 
             lastX = x;
