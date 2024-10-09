@@ -35,6 +35,30 @@ function handleShake() {
 
 shakeButton.addEventListener("click", handleShake);
 
+    let lastX, lastY, lastZ;
+    let lastUpdate = 0;
+
+window.addEventListener('devicemotion', (event) => {
+        const currentTime = Date.now();
+        if ((currentTime - lastUpdate) > 100) {
+            const diffTime = (currentTime - lastUpdate);
+            lastUpdate = currentTime;
+
+            const x = event.accelerationIncludingGravity.x;
+            const y = event.accelerationIncludingGravity.y;
+            const z = event.accelerationIncludingGravity.z;
+
+            const speed = Math.abs(x + y + z - (lastX || 0) - (lastY || 0) - (lastZ || 0)) / diffTime * 10000;
+
+            if (speed > 5000) { // Thay đổi giá trị này để điều chỉnh độ nhạy
+                handleShake();
+            }
+
+            lastX = x;
+            lastY = y;
+            lastZ = z;
+        }
+    });
 
 function randomizeResults() {
   const keys = Object.keys(images);
