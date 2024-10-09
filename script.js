@@ -92,5 +92,16 @@ openButton.addEventListener("click", openBat);
 shakeButton.addEventListener("click", shakeBat);
 
 
-
+ document.addEventListener('click', function(event) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = `${event.pageX - 15}px`; // Để căn giữa trái tim
+            heart.style.top = `${event.pageY - 15}px`; // Để căn giữa trái tim
+            document.body.appendChild(heart);
+            
+            // Xóa trái tim sau 0.5 giây
+            setTimeout(() => {
+                heart.remove();
+            }, 500);
+        });
 
